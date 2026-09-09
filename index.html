@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bibliotech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    
+    <header class="header-section">
+      <h1 id="title-section">Biblio<span class="red">Tech</span></h1>
+    </header>
+    <nav class="nav-section">
+      <div class="nav-container">
+        <select name="filters" id="filters-select">
+          <option value="">--Filtros--</option>
+          <option value="genero">Genero</option>
+          <option value="texto">Autor/titulo</option>
+          <option value="ano">Año</option>
+        </select>
+        <input class="searchbar" type="text" placeholder="Buscar por filtro..." />
+        <button class="searchbutton"><span class="search-icon"></span></button>
+      </div>
+      <div class="nav-filters">
+        <div class="filter-pill" id="todos">
+          Todos
+        </div>
+        <div class="filter-pill" id="favs">
+          Favoritos
+        </div>
+        <div class="filter-pill" id="reservas">
+          Mis reservas
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="book-list">
+        <div class="cards-section">
+          <!-- <div class="book-card">
+            <span class="icon"><span class="star-icon"></span></span>
+            <span class="right-icon"><span class="book-icon"></span></span>
+            <h5 class="subtitle-card" title="autor">JK rowlin</h5>
+            <h3 class="title-card" title="titulo">Harry Potter</h3>
+            <div class="pills-card">
+              <span class="pill" title="año">1984</span>
+              <span class="pill" title="genero">ficcion</span>
+              <span class="pill nodisp" title="disponibilidad">prestado</span>
+            </div>
+          </div>
+          <div class="book-card">
+            <span class="icon"><span class="star-icon"></span></span>
+            <span class="right-icon"><span class="book-icon"></span></span>
+            <h5 class="subtitle-card">JK rowlin</h5>
+            <h3 class="title-card">Harry Potter</h3>
+            <div class="pills-card">
+              <span class="pill" title="año">1984</span>
+              <span class="pill" title="genero">ficcion</span>
+              <span class="pill nodisp" title="disponibilidad">prestado</span>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+
+    <button class="add-button" title="añadir">
+      <span class="add-icon"></span>
+    </button>
+    <section class="modal-container none">
+      <form id="addForm" class="modal-form">
+        <div class="modal-div">
+          <label for="titulo">Titulo</label>
+          <input type="text" name="titulo" placeholder="Titulo... " required>
+        </div>
+        <div class="modal-div">
+          <label for="autor">Autor</label>
+          <input type="text" name="autor" placeholder="Autor..." required>
+        </div>
+        <div class="modal-div">
+          <label for="genero">Genero</label>
+          <input type="text" name="genero" placeholder="fantasia, ciencia ficcion ..." required>
+        </div>
+        <div class="modal-div">
+          <label for="ano">Año</label>
+          <input type="number" name="ano" placeholder="fecha de lanzamiento" required>
+        </div>
+
+        <button type="submit" class="modal-button">Agregar Libro</button>
+      </form>
+      <button class="close-button"><span class="close-icon"></span></button>
+    </section>
+
+    <footer class="footer-section">
+      <div class="logo-section">
+        <span class="utn-logo"></span>
+        <p>
+          Programacion 4 TP integrador 1
+        </p>
+      </div>
+      <p>
+        ©Victor M. Herrera
+      </p>
+    </footer>
+    <script src="data.js"></script>
+    <script src="render.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
