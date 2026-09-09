@@ -86,12 +86,13 @@ let misReservas = [
 ];
 
 
-
 for (const libro of libros) {
   if (misReservas.some((reserva) => reserva.id === libro.id)) {
     libro.disponible = false;
   }
 }
+if (!JSON.parse(localStorage.getItem('books'))) {
+  localStorage.setItem("books", JSON.stringify(libros));
+}
 
-localStorage.setItem("books", JSON.stringify(libros));
 localStorage.setItem("booked", JSON.stringify(misReservas));

@@ -117,7 +117,7 @@ addForm.addEventListener('submit', (e)=>{
     favorito: false,
   })
 
-  localStorage.setItem('books', listaLibros);
+  localStorage.setItem('books', JSON.stringify(listaLibros));
   renderizar(listaLibros)
   handleModal();
   addForm.reset();
